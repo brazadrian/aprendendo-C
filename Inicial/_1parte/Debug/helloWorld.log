@@ -1,0 +1,3 @@
+﻿HelloWorld.obj : error LNK2019: símbolo externo não resolvido, _scanf, referenciado na função _main
+HelloWorld.obj : error LNK2019: símbolo externo não resolvido, _printf, referenciado na função _main
+C:\Users\Gilma\OneDrive\Documentos\LP\C\Inicial\helloWorld\Debug\helloWorld.exe : fatal error LNK1120: 2 externo não resolvidos
