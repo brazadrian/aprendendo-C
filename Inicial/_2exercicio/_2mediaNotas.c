@@ -6,6 +6,7 @@ int main(int argc, char** argv)
 	//setando idioma pt-br
 	setlocale(LC_ALL, "Portuguese");
 	
+	//Ex. l.2.1 - Questão 4
 	//Faça um Programa que peça as 4 notas bimestrais e mostre a média.
 	
 	//declarando variáveis
