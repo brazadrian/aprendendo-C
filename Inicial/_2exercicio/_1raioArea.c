@@ -1,22 +1,27 @@
 #include <stdio.h>
+#include <math.h>
+#include <locale.h>
 
 int main(int argc, char** argv)
 {
-	//Ex. l.2.1 - Questão 6
-	//Fazer um Programa que peça o raio de um círculo, calcule e mostre sua área.
+	setlocale(LC_ALL, "Portuguese_Brasil");
+
+	//Ex. l.2.1 - QuestÃ£o 6
+	//Fazer um Programa que peÃ§a o raio de um cÃ­rculo, calcule e mostre sua Ã¡rea.
 	
 	float raio, area, pi;
 	
 	pi = 3.14;
 	
-	printf("Olá, por favor, digite o RAIO do círculo a fim de obter sua área: ");
+	printf("OlÃ¡, por favor, digite o RAIO do cÃ­rculo a fim de obter sua Ã¡rea: ");
 	scanf("%f", &raio);
 	
-	area = pi*(raio*raio);
+	//area = pi*(raio*raio);
+	area = pi*pow(raio, 2);
 	
 	printf("%.2f", area);
 		
-	//descobrir função para elevar a potência no C
+	//descobrir funÃ§Ã£o para elevar a potÃªncia no C
 
 	return 0;
 }
