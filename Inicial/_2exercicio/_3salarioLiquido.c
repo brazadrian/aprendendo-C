@@ -14,6 +14,9 @@ int main(int argc, char** argv)
 
 	//declarando variáveis dos impostos e valor sindical
 	float irpf = 0.11, inss = 0.08, sind = 0.05;
+	
+	//declarando variáveis resultantes das taxações
+	float restIrpf, restInss, restSind;
 
 	//solicitação e entrada de dados
 	printf("Digite quanto você recebe por hora: ");
@@ -26,13 +29,17 @@ int main(int argc, char** argv)
 	salBruto = salHora * tempoTrabalho;
 	printf("\n+ Salário bruto: R$ %.2f\n", salBruto);
 
-	printf("- Pago ao IRPF: R$ %.2f\n", salBruto * irpf);
+	restIrpf = salBruto*irpf;
 
-	printf("- Pago ao INSS: R$ %.2f\n", salBruto * inss);
+	printf("- Pago ao IRPF: R$ %.2f\n", restIrpf);
 
-	printf("- Pago ao Sindicato: R$ %.2f\n", salBruto * sind);
+	restInss = salBruto * inss;
+	printf("- Pago ao INSS: R$ %.2f\n", restInss);
 
-	salLiquido = salBruto - salBruto * inss - salBruto * irpf - salBruto * sind;
+	restSind = salBruto * sind;
+	printf("- Pago ao Sindicato: R$ %.2f\n", restSind);
+
+	salLiquido = salBruto - restInss - restIrpf - restSind;
 
 	printf("\n= Salário líquido: %.2f\n", salLiquido);
 
