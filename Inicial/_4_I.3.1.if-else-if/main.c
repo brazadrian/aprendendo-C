@@ -4,11 +4,14 @@
 #include "ex2.h"
 #include "ex6.h"
 
-// Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido. - adaptar para não-binário
+// Método main, que consite em um pequeno "menu" para execução de alguns algoritmos simples
 
 int main(int argc, char const *argv[])
 {
-        int qualgoritmo;
+    //// Tentar colocar essa estrutura do menu em loop a fim de que só saia dele quando digitar 0
+
+    // declarando variável da escolha do usuário sobre qual algoritmo deseja
+    int qualgoritmo;
 
     printf("\n1 - Maior valor entre dois números;");
     printf("\n2 - Se o número digitado é negativo ou positivo;");
@@ -18,6 +21,7 @@ int main(int argc, char const *argv[])
 
     printf("\n");
 
+    // Switch-case para a execução do algoritmo escolhido
     switch (qualgoritmo)
     {
     case 1:
