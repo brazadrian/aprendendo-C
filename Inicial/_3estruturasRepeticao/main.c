@@ -25,6 +25,7 @@ int main()
         printf("\nEscolha o número de um dos algoritmos descritos: ");
         scanf("%i", &qualgoritmo);
         printf("——————————————————————————————————————————————————————————\n");
+        
         // Switch-case para a execução do algoritmo escolhido
         switch (qualgoritmo)
         {
