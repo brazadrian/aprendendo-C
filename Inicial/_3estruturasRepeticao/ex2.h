@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 // Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
 
@@ -8,6 +7,8 @@ void ex2(){
     // declarando variáveis, senha e nome como caractéres
     char nome, senha;
 
+    //// Melhorar isso com o uso de strings
+    // Entradas de dados, usuário e senha como char
     printf("Digite seu nome de usuário: ");
     scanf(" %c", &nome);
 
