@@ -13,7 +13,7 @@ void ex12(){
     
     int numMultiplicado, resultado;
 
-    printf("Digite um valor entre 0 e 10 para descobri sua tabuada: ");
+    printf("Digite um valor entre 1 e 10 para descobri sua tabuada: ");
     scanf("%i", &numMultiplicado);
 
     // tenta fazer com vetor
