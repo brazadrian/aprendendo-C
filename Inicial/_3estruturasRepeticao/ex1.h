@@ -11,10 +11,10 @@ void ex1(){
     // enquanto - nota for incorreta (> 10 || < 0), solicitar nota novamente
     while (nota > 10 || nota < 0)
     {
-        printf("Nota inválida!\nFavor, digite uma nota entre 0 e 10: ");
+        printf("\nNota inválida!\nFavor, digite uma nota entre 0 e 10: ");
         scanf("%f", &nota);
     }
     
-    printf("Parabéns! Sua nota foi registrada!\nNota: %.2f", nota);
+    printf("\nParabéns! Sua nota foi registrada!\nNota: %.2f", nota);
 
 }
