@@ -3,17 +3,20 @@
 typedef struct
 {
     int opcao;
-    char nome[20];
+    char nome[20]; // estudar como adicionar linha de código como string ou como atributo, ou pelo menos a chamada de função
 } opcoes;
 
 void line_show()
 {
     printf("—————————————————————\n");
 }
+
+// Função para exibição de menu de CRUD
 void menu_show()
 {
     // declarando as opções do CRUD através de vetor de struct pré-definido
     opcoes OP[5];
+    // opcoes e numeracao do menu
     OP[0].opcao = 0;
     strcpy(OP[0].nome, "Sair");
     OP[1].opcao = 1;
