@@ -21,6 +21,8 @@ int main()
 {
   
   menu_show();
+  
+  
 
   /* 
   struct cadastro c;

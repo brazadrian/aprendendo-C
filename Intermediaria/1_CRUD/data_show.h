@@ -34,3 +34,15 @@ void menu_show()
         printf("%d - %s\n", OP[i].opcao, OP[i].nome);
     line_show();
 }
+
+// opcoes baseadas no menu_show(), o qual tem um CRUD
+// recebe um inteiro e não retorna nada
+void escolha(int opcao_escolhida)
+{
+    switch(option)
+    {
+        case 0:
+            option = 0;
+            break;    
+    }
+}
