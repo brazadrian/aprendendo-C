@@ -19,9 +19,11 @@ struct cadastro
  */
 int main()
 {
-  
-  menu_show();
-  
+  int opcao = !0;
+
+  opcao = menu_show(opcao);
+  printf("%d", opcao);
+
   
 
   /* 
