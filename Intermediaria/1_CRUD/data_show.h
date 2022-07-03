@@ -31,7 +31,7 @@ void menu_show()
     OP[4].opcao = 4;
     strcpy(OP[4].nome, "Deletar");
     OP[5].opcao = 5;
-    strcpy(OP[5].nome, "Calcular média");
+    strcpy(OP[5].nome, "Média e aprovados");
 
     // Exibição das opções e seus respectivos valores no menu
     line_show();
@@ -65,4 +65,10 @@ void menu_show_aluno()
     OpAl[3].opcao = 3;
     strcpy(OpAl[3].nome, "Reprovados");
     
+    // Exibição das opções e seus respectivos valores no menu da média
+    line_show();
+    printf("CRUD - Menu média e aprovados\n");
+    for (int i = 0; i < 4; i++)
+        printf("%d - %s\n", OpAl[i].opcao, OpAl[i].nome);
+    line_show();
 }

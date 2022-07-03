@@ -24,11 +24,27 @@ int main()
   {
     switch (opcao)
     {
-    case 5:
-      printf("asdlkajdlsanjln");
+
+    case 0:
+      printf("Você escolheu sair, adeus!");
       break;
+
+    case 1:
+      printf("teste");
+      break;
+
+    case 5:
+      printf("\n");
+      int opcao_aluno = !0;
+      while (opcao_aluno != 0)
+      {
+        menu_show_aluno();
+        opcao_aluno = escolha(opcao_aluno);
+        printf("deu certo");
+      }
     }
 
+    printf("\nVocê finalizou a execução. Deseja fazer mais alguma operação?\n");
     menu_show();
     opcao = escolha(opcao);
   }
