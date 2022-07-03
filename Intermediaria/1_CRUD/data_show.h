@@ -15,11 +15,11 @@ void line_show()
 
 // Função para exibição de menu de CRUD
 // Recebe inteiro de opção e o retorna para uso
-int menu_show(int *opcao)
+void menu_show()
 {
     // declarando as opções do CRUD através de vetor de struct das opções pré-definido
-    opcoes OP[5];
-    // opcoes e numeracao do menu
+    opcoes OP[6];
+    // OPCOES E NUMERAÇÃO DO MENU PRINCIPAL
     OP[0].opcao = 0;
     strcpy(OP[0].nome, "Sair");
     OP[1].opcao = 1;
@@ -30,16 +30,15 @@ int menu_show(int *opcao)
     strcpy(OP[3].nome, "Mudar");
     OP[4].opcao = 4;
     strcpy(OP[4].nome, "Deletar");
+    OP[5].opcao = 5;
+    strcpy(OP[5].nome, "Calcular média");
 
     // Exibição das opções e seus respectivos valores no menu
     line_show();
     printf("CRUD - Menu Principal\n");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
         printf("%d - %s\n", OP[i].opcao, OP[i].nome);
     line_show();
-
-    opcao = escolha(opcao);
-    return opcao;
 }
 
 // opcoes baseadas no menu_show(), o qual tem um CRUD
@@ -52,13 +51,18 @@ int escolha(int opcao_escolhida)
     return opcao_escolhida;
 }
 
-void operacoes(opcao_escolhida)
+void menu_show_aluno()
 {
-    switch(opcao_escolhida)
-    {
-        case 0:
-            printf("0");
-            opcao_escolhida = 0;
-            break;    
-    }
+    // declarando as opções do menu "Calcular média"
+    opcoes OpAl[4];
+    // OPÇÕES PARA A MÉDIA DOS ALUNOS
+    OpAl[0].opcao = 0;
+    strcpy(OpAl[0].nome, "Sair");
+    OpAl[1].opcao = 1;
+    strcpy(OpAl[1].nome, "Média de UM aluno");
+    OpAl[2].opcao = 2;
+    strcpy(OpAl[2].nome, "Aprovados");
+    OpAl[3].opcao = 3;
+    strcpy(OpAl[3].nome, "Reprovados");
+    
 }

@@ -20,7 +20,7 @@ char positividade(int num)
     }
     else
     {
-        printf("negative");
+        printf("negative"); // a
     }
 
     return valor;
