@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "data.h"
 #include "data_show.h"
 
 typedef struct alunos
@@ -13,6 +14,9 @@ typedef struct alunos
 
 int main()
 {
+  aluno testando[20];
+
+
   int opcao = !0;
 
   menu_show();
@@ -22,26 +26,54 @@ int main()
 
   while (opcao != 0)
   {
+
     switch (opcao)
     {
-
-    case 0:
-      printf("Você escolheu sair, adeus!");
+    case 1:
+      system("clear");
+      printf("Você escolheu a opção criar, para isso é necessário informar:\n");
+      printf("Matrícula do aluno: ");
+      scanf("%d", testando[0].matricula);
+      
+      printf("Nome do aluno: ");
+      scanf(" %s", testando[0].nome);
+      
+      data_create();
       break;
 
-    case 1:
-      printf("teste");
+    case 2:
+      system("clear");
+      printf("CONSULTAR");
+      data_read();
+      break;
+
+    case 3:
+      system("clear");
+      printf("ALTERAR");
+      data_update();
+      break;
+
+    case 4:
+      system("clear");
+      printf("ALTERAR");
+      data_delete();
       break;
 
     case 5:
+      system("clear");
       printf("\n");
       int opcao_aluno = !0;
       while (opcao_aluno != 0)
       {
         menu_show_aluno();
         opcao_aluno = escolha(opcao_aluno);
-        printf("deu certo");
+        printf("deu certo\n");
       }
+      break;
+
+      default:
+        printf("Algo deu errado! Favor, tentar novamente...");
+        continue;
     }
 
     printf("\nVocê finalizou a execução. Deseja fazer mais alguma operação?\n");
