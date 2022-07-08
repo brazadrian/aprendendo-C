@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "struct_aluno.h"
+
 #define TAMNOME 50+1
 
 void data_create()

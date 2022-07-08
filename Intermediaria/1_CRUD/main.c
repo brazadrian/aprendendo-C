@@ -1,21 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "data.h"
 #include "data_show.h"
+#include "struct_aluno.h"
 
-typedef struct alunos
-{
-  char nome[50];
-  int matricula;
-  int notas[4];
-} aluno;
 
 int main()
 {
-  aluno testando[20];
+  Aluno alunos[5];
 
+  alunos[0].idade = 20;
+  strcpy(alunos[0].nome, "Gilmar");
+  alunos[0].notas[0] = 1;
+  alunos[0].notas[1] = 5;
+  alunos[0].notas[2] = 1;
+  alunos[0].notas[9] = 10;
+
+
+  imprimir_aluno(alunos[0]);
+
+/* 
 
   int opcao = !0;
 
@@ -30,14 +32,6 @@ int main()
     switch (opcao)
     {
     case 1:
-      system("clear");
-      printf("Você escolheu a opção criar, para isso é necessário informar:\n");
-      printf("Matrícula do aluno: ");
-      scanf("%d", testando[0].matricula);
-      
-      printf("Nome do aluno: ");
-      scanf(" %s", testando[0].nome);
-      
       data_create();
       break;
 
@@ -79,7 +73,7 @@ int main()
     printf("\nVocê finalizou a execução. Deseja fazer mais alguma operação?\n");
     menu_show();
     opcao = escolha(opcao);
-  }
+  } */
 
   return 0;
 }
