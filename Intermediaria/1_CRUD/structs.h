@@ -1,7 +1,7 @@
 typedef struct
 {
 
-    char nome[40];
+    char nome[40 + 1];
     int matricula;
     int notas[4];
     int media;

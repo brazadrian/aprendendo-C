@@ -14,3 +14,5 @@ int rd_aluno(Aluno a)
 
     return 0;
 }
+
+
