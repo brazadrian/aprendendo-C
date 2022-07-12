@@ -1,24 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "structs.h"
 #include "menu.h"
 
 int main()
 {
     int opcao_menu = !0;
+    int op_comida = !0;
+    int op_bebida = !0;
 
     while (opcao_menu != 0)
     {
-        opcao_menu = mn_cardapio(&opcao_menu);
+        opcao_menu = mn_cardapio(opcao_menu);
         system("clear");
+        // clrscr();
 
         switch (opcao_menu)
         {
-        case 1:
-
+        case 1: // opcao das comidas
+            op_comida = mn_comidas(op_comida);
             printf("1 - Comidas\n");
             break;
         case 2:
             printf("2 - Bebidas\n");
+            printf("%d", op_bebida);
             break;
 
         case 0:
