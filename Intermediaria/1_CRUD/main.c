@@ -12,7 +12,8 @@ int main()
 {
 
     /* Declarando vetor de alunos, "uma turma" */
-    Aluno turma[5];
+    // Aluno turma[5];
+    Aluno teste;
 
     int opcao = !0;
 
@@ -24,13 +25,13 @@ int main()
         {
         case 1:
             printf("1 - Criar");
-            ct_aluno(&turma[0]);
+            // ct_aluno(&teste);
             break;
-        case 2:
+        /* case 2:
             printf("2 - Ler");
             rd_aluno(turma[0]);
 
-            break;
+            break; */
 /*         case 3:
             printf("3");
             up_aluno(turma[0]);
@@ -40,7 +41,7 @@ int main()
             up_aluno(turma[0]);
             break; */
         case 0:
-            printf("Você escolheu sair");
+            printf("Você escolheu sair\n");
             break;
         }
     }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int mn_show(int *opcao)
+int mn_show(int *o)
 {
     printf("------- Menu -------\n");
     printf("1 - Cadastrar alunos\n");
@@ -10,8 +10,8 @@ int mn_show(int *opcao)
     printf("--------------------\n");
     printf("Digite a opção escolhida: ");
     
-    scanf("%i", *opcao);
-    printf("%i", opcao);
+    scanf("%i", &o);
+    printf("%i", o);
 
-    return 0;
+    return o;
 }

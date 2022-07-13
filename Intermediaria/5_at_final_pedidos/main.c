@@ -14,13 +14,12 @@ int main()
     {
         opcao_menu = mn_cardapio(opcao_menu);
         system("clear");
-        // clrscr();
 
         switch (opcao_menu)
         {
         case 1: // opcao das comidas
+
             op_comida = mn_comidas(op_comida);
-            printf("1 - Comidas\n");
             break;
         case 2:
             printf("2 - Bebidas\n");
