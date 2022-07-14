@@ -3,9 +3,13 @@
 
 #include "structs.h"
 #include "menu.h"
+#include "mn_cardapio.h"
+#include "mn_comidas.h"
+#include "mn_bebidas.h"
 
 int main()
 {
+    // 
     int opcao_menu = !0;
     int op_comida = !0;
     int op_bebida = !0;
@@ -18,10 +22,10 @@ int main()
         switch (opcao_menu)
         {
         case 1: // opcao das comidas
-
             op_comida = mn_comidas(op_comida);
             break;
         case 2:
+            op_bebida = mn_bebidas(op_bebida);
             printf("2 - Bebidas\n");
             printf("%d", op_bebida);
             break;

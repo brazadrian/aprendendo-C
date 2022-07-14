@@ -24,8 +24,8 @@ int main()
         switch (opcao)
         {
         case 1:
-            printf("1 - Criar");
-            // ct_aluno(&teste);
+            printf("\n\n1 - Criar\n\n");
+            ct_aluno(&teste);
             break;
         /* case 2:
             printf("2 - Ler");
@@ -41,9 +41,10 @@ int main()
             up_aluno(turma[0]);
             break; */
         case 0:
-            printf("Você escolheu sair\n");
+            printf("Você escolheu sair\n\n\n");
             break;
         }
+        printf("\n\n\n");
     }
 
     return 0;
