@@ -6,7 +6,12 @@
 
 #define TVETCMD 4
 
-float mn_comidas()
+/*
+Função para exibição da seção de comidas do cardápio
+Não recebe parâmetros
+Retorna o preço do produto (float)
+*/
+float mn_comidas(void)
 {
 
     // DECLARAÇÃO DE VARIÁVEIS

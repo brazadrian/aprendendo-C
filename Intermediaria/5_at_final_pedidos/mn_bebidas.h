@@ -6,6 +6,11 @@
 
 #define TVETBBD 4
 
+/*
+Função para exibição da seção de bebidas do cardápio
+Não recebe parâmetros
+Retorna o preço do produto (float)
+*/
 float mn_bebidas()
 {
 
