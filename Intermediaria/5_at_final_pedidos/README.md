@@ -35,11 +35,11 @@ Apesar de ser muito simples, o código pode ser utilizado na vida diária, fazen
 
 É neceessário que, no final, seja impresso o custo total dos produtos escolhidos
 
-## Desenvolvimento
+## Desenvolvimento *adicionar fluxogramas
 
 ### Recursos
 
-Foram usados neste software os seguintes recursos:
+Foram usados neste software os seguintes recursos[[4](#referências)]:
 
 * Estrutura de decisão;
 * Laço de repetição;
@@ -66,7 +66,7 @@ Dentro do arquivo [*mn_cardapio.h*](https://github.com/brazadrian/aprendendo-C/b
 A função recebe um tipo inteiro ***opcao* → o**, e retorna a opção escolhida pelo usuário.
 
 ~~~c
-    int mn_cardapio(int o)
+int mn_cardapio(int o)
 {
     printf("Exibição de todas as opções...");
     printf("Faça seu pedido. Digite sua opção: \n");
@@ -78,27 +78,62 @@ A função recebe um tipo inteiro ***opcao* → o**, e retorna a opção escolhi
 
 ### Menu de comidas e bebidas
 
-Nos arquivos [*mn_comidas.h*](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/mn_bebidas.h) e [*mn_bebidas.h*](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/mn_bebidas.h) foram declaradas vetores do tipo c(omida) e b(ebida) e preenchidos com os dados necessários segundo o struct Produto, como exemplo a seguir:
+Nos arquivos [*mn_comidas.h*](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/mn_bebidas.h) e [*mn_bebidas.h*](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/mn_bebidas.h) foram declaradas vetores do tipo c(omida) e b(ebida) e preenchidos com os dados necessários segundo o struct Produto, como no exemplo a seguir:
 
 ~~~c
-    strcpy(c[0].nome, "Feijão e arroz");
-    c[0].opcao = 0 + 1;
-    c[0].preco = 10.00;
+strcpy(x[0].nome, "Feijão e arroz");
+x[0].opcao = 0 + 1;
+x[0].preco = 10.00;
 ~~~
 
-### Referências
+> 'x' significa qualquer variável declarada a partir do struct Produto
+
+Depois de declarados os itens do cardápio, faz-se uso de estrutura de repetição (for) para percorrer todo o vetor e imprimir as partes de estrutura Produto:
+
+~~~c
+for (i = 0; i < tamanho_do_vetor; i++)
+        printf("%d - R$ %.2f - %s\n", x[i].opcao, x[i].preco, x[i].nome);
+~~~
+
+No que diz respeito a entrada de dados, há uma estrutura de repetição (while) que visa validar a entrada do usuário:
+
+~~~c
+while (op < 0 || op > tamanho_do_vetor)
+{
+  scanf("%d", &op);
+}
+~~~
+
+Ainda há umt este usando-se de estrutura de decisão (if) para que, se o usuário escolha sair da tela do menu (digitando o 0 que será atribuído na variável *op*, haverá a saída do software, sem passar pelas instruições internas do if em questão:
+
+~~~c
+if (op != 0)
+    {
+        printf("Você escolheu comer/beber %s, que custa R$ %.2f\n\n", x[op - 1].nome, x[op - 1].preco);
+        preco = x[op - 1].preco;
+    }
+~~~
+
+A função não recebe parâmetros e retorna tipo float, que será o preço do produto escolhido:
+
+~~~c
+float mn_comidas(void)
+{
+  float preco = 0.0;
+
+  // o usuário faz sua escolha, então imprime-se:
+
+  printf("Você escolheu comer %s, que custa R$ %.2f\n\n", x[op - 1].nome, x[op - 1].preco);
+  preco = x[op - 1].preco; // atribui à variável preco o valor do preço pré-cadastrado no item escolhido pelo usuário
+
+  return preco;
+}
+~~~
+
+## Referências
 
 1. Problema ("lanche") nº [**1038**](https://www.beecrowd.com.br/judge/pt/problems/view/1038) do beecrowd.
 2. Andrei L. **[O que é um CLI?](https://www.hostinger.com.br/tutoriais/o-que-e-cli)**, 2021.
-3. Linguagem C descomplicada. [Material complementar](https://programacaodescomplicada.wordpress.com/complementar/)
+3. Linguagem C descomplicada. [**Material complementar**](https://programacaodescomplicada.wordpress.com/complementar/)
 4. PEREIRA, S.L. [**Linguagem C**.](https://www.ime.usp.br/~slago/slago-C.pdf)
 5. BACKES, A. [**Linguagem C completa e descomplicada**](https://www.amazon.com.br/Linguagem-C-ANDR%C3%89-BACKES/dp/8535291067)
-
-
-notas sobre o que arnott disse agora:
-
-> Existe uma necessidade de acompanhar as vendas e preços taltal
->
-> informar qual cliente e informar qual valor da venda
->
-> um cadastro que permita fazer as operações básicas de CRUD
