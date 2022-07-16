@@ -9,12 +9,12 @@
 float mn_comidas()
 {
 
-    // "INSTANCIANDO" STRUCT DE PRODUTOS → C(OMIDAS)
-    Produto c[TVETCMD];
-    int i, op;
+    // DECLARAÇÃO DE VARIÁVEIS
+    Produto c[TVETCMD]; // declarando vetor c(omidas) do tipo Produto (definido em structs.h)
+    int i, op = -1;
     float preco = 0.0;
 
-    // DECLARANDO OS ALIMENTOS DO CARDÁPIO
+    // INSERÇÃO DE DADOS DOS ALIMENTOS DO CARDÁPIO
     strcpy(c[0].nome, "Feijão e arroz");
     c[0].opcao = 0 + 1;
     c[0].preco = 10.00;
@@ -28,16 +28,30 @@ float mn_comidas()
     c[3].opcao = 3 + 1;
     c[3].preco = 15.00;
 
-    
-    printf("------  cardápio - COMIDA  ------\n\n"); // 33 caracteres
-    for (i = 0; i < TVETCMD; i++)
-        printf("%d - R$ %.2f - %s\n", c[i].opcao, c[i].preco, c[i].nome);
-    printf("\n0 - Voltar para o menu principal\n");
-    printf("---------------------------------\n"); // 33 caracteres
-    scanf("%d", &op);
     system("clear");
 
-    printf("Você escolheu comer %s, que custa R$ %.2f\n\n", c[op - 1].nome, c[op - 1].preco);
+    // SAÍDA DE DADOS
+    printf("------  cardápio - COMIDA  ------\n\n"); // cabeçalho
+    for (i = 0; i < TVETCMD; i++)                    // for para percorrer todo o vetor de itens do cardápio
+        printf("%d - R$ %.2f - %s\n", c[i].opcao, c[i].preco, c[i].nome);
+    printf("\n0 - Voltar para o menu principal\n");
+    printf("---------------------------------\n"); // rodapé
+
+    // VERIFICANDO SE A ESCOLHA É VÁLIDA
+    while (op < 0 || op > TVETCMD)
+    {
+        // ENTRADA DE DADOS
+        scanf("%d", &op);
+    }
+
+    system("clear");
+
+    if (op != 0)
+    {
+        printf("Você escolheu comer %s, que custa R$ %.2f\n\n", c[op - 1].nome, c[op - 1].preco);
+        preco = c[op - 1].preco;
+    }
+
     preco = c[op - 1].preco;
 
     return preco;

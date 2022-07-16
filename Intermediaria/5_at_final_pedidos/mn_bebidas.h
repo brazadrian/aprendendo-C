@@ -11,7 +11,7 @@ float mn_bebidas()
 
     // DECLARAÇÃO DE VARIÁVEIS
     Produto b[TVETBBD]; // declarando vetor b(ebidas) do tipo Produto (definido em structs.h)
-    int i, op = !0;
+    int i, op = -1;
     float preco = 0.0;
 
     // INSERÇÃO DE DADOS DAS BEBIDAS DO CARDÁPIO
