@@ -9,12 +9,12 @@
 float mn_bebidas()
 {
 
-    // "INSTANCIANDO" STRUCT DE PRODUTOS → B(EBIDAS)
-    Produto b[TVETBBD];
+    // DECLARAÇÃO DE VARIÁVEIS
+    Produto b[TVETBBD]; // declarando vetor b(ebidas) do tipo Produto (definido em structs.h)
     int i, op = !0;
     float preco = 0.0;
 
-    // DECLARANDO VARIÁVEIS
+    // INSERÇÃO DE DADOS DAS BEBIDAS DO CARDÁPIO
     strcpy(b[0].nome, "Água");
     b[0].opcao = 0 + 1;
     b[0].preco = 2.50;
@@ -28,20 +28,32 @@ float mn_bebidas()
     b[3].opcao = 3 + 1;
     b[3].preco = 8.50;
 
-        printf("------  cardápio - BEBIDA  ------\n\n"); // 33 caracteres
-        for (i = 0; i < TVETBBD; i++)
-            printf("%d - R$ %.2f - %s\n", b[i].opcao, b[i].preco, b[i].nome);
-        printf("\n0 - Voltar para o menu principal\n");
-        printf("---------------------------------\n"); // 33 caracteres
+    system("clear");
 
+    // SAÍDA DE DADOS
+    printf("------  cardápio - BEBIDA  ------\n\n"); // cabeçalho
+    for (i = 0; i < TVETBBD; i++)                    // for para percorrer todo o vetor de itens do cardápio
+        printf("%d - R$ %.2f - %s\n", b[i].opcao, b[i].preco, b[i].nome);
+    printf("\n0 - Voltar para o menu principal\n");
+    printf("---------------------------------\n"); // rodapé
+
+    // VERIFICANDO SE A ESCOLHA É VÁLIDA
+    while (op < 0 || op > TVETBBD)
+    {
+        // ENTRADA DE DADOS
         scanf("%d", &op);
-        system("clear");
+    }
 
-        // AQUI É OBSERVADO O VALOR A SER COBRADO
+    system("clear");
+
+    // VERIFICANDO SE
+    if (op != 0)
+    {
         printf("Você escolheu beber %s, que custa R$ %.2f\n\n", b[op - 1].nome, b[op - 1].preco);
-        // ATRIBUIÇÃO NA VARIÁVEL DE RETORNO DO PREÇO A SER COBRADO
-
         preco = b[op - 1].preco;
+    }
+
+    preco = b[op - 1].preco;
 
     return preco;
 }
