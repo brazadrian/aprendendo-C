@@ -10,11 +10,9 @@ Foi baseado em um problema da plataforma beecrowd[[1](#referências)], onde são
 
 ![Imagem extraída do problema da plataforma, com uma tabela que contém o código, especificação/nome de alguns produtos e o preço destes, com uns 5 exemplos de produtos listados](https://resources.beecrowd.com.br/gallery/images/problems/UOJ_1038_pt.png)
 
-## Finalidade
+## Finalidade (problema)
 
 Devido às rotinas agitadas nos restaurantes, faz-se necessária a digitalização de alguns serviços, para tanto foi desenvolvida esta solução que visa possibilitar a escolha dentre as opções de comida por parte do usuário, bem como da soma automática do preço dos produtos escolhidos.
-
-Tem o objetivo de agilizar os pedidos feitos em certos estabelecimentos à medida que computabiliza os produtos e seus respectivos valores em uma operação simples a fim de verificar o preço de uma refeição completa.
 
 Tem o objetivo de agilizar os pedidos feitos em certos estabelecimentos à medida que computabiliza os produtos e seus respectivos valores em uma operação simples a fim de verificar o preço de uma refeição completa.
 
@@ -33,23 +31,33 @@ Apesar de ser muito simples, o código pode ser utilizado na vida diária, fazen
 2. Cardápio dos alimentos
 3. Cadápio das bebidas
 
+É necessário que seja impresso o custo do produto escolhido
+
+É neceessário que, no final, seja impresso o custo total dos produtos escolhidos
+
 ## Desenvolvimento
 
-> EXPLICAR COMO FOI O DESENVOLVIMENTO
->
-> COLAR PARTES DE CÓDIGOS INTERESSANTES E PRA EXPLICÁLOS
->
+### Recursos
+
+Foram usados neste software os seguintes recursos:
+
+* Estrutura de decisão;
+* Laço de repetição;
+* Vetor;
+* Struct;
+* Funções;
+
 > COLAR TAMBÉM FLUXOGRAMAAAAAAAAAAAAAAAAAAAAAA
 
 ### Struct
 
-Foi definido no arquivo *[structs.h](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/structs.h)* o struct Produto, o qual apresenta a seguinte estrutura:
+Foi definido no arquivo *[structs.h](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/structs.h)*, o struct Produto, o qual apresenta a seguinte estrutura:
 
-- Opção concernete ao produto
-- Nome do produto
-- Preço do produto em questão
+- **Opção** concernete ao produto
+- **Nome** do produto
+- **Preço** do produto em questão
 
-Podendo ser utilizado para comidas e bebidas de modo geral.
+Podendo ser utilizado para comidas, bebidas e afins.
 
 ### Menu principal
 
@@ -82,6 +90,10 @@ Nos arquivos [*mn_comidas.h*](https://github.com/brazadrian/aprendendo-C/blob/ma
 
 1. Problema ("lanche") nº [**1038**](https://www.beecrowd.com.br/judge/pt/problems/view/1038) do beecrowd.
 2. Andrei L. **[O que é um CLI?](https://www.hostinger.com.br/tutoriais/o-que-e-cli)**, 2021.
+3. Linguagem C descomplicada. [Material complementar](https://programacaodescomplicada.wordpress.com/complementar/)
+4. PEREIRA, S.L. [**Linguagem C**.](https://www.ime.usp.br/~slago/slago-C.pdf)
+5. BACKES, A. [**Linguagem C completa e descomplicada**](https://www.amazon.com.br/Linguagem-C-ANDR%C3%89-BACKES/dp/8535291067)
+
 
 notas sobre o que arnott disse agora:
 
