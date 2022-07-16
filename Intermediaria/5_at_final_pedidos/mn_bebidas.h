@@ -46,14 +46,13 @@ float mn_bebidas()
 
     system("clear");
 
-    // VERIFICANDO SE
+    // VERIFICAÇÃO DO TIPO DE AÇÃO DO USUÁRIO
+    // se ele escolheu sair, não passará por esse if
     if (op != 0)
     {
         printf("Você escolheu beber %s, que custa R$ %.2f\n\n", b[op - 1].nome, b[op - 1].preco);
         preco = b[op - 1].preco;
     }
-
-    preco = b[op - 1].preco;
 
     return preco;
 }

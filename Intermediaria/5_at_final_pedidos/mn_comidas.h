@@ -46,13 +46,13 @@ float mn_comidas()
 
     system("clear");
 
+    // VERIFICAÇÃO DO TIPO DE AÇÃO DO USUÁRIO
+    // se ele escolheu sair, não passará por esse if
     if (op != 0)
     {
         printf("Você escolheu comer %s, que custa R$ %.2f\n\n", c[op - 1].nome, c[op - 1].preco);
         preco = c[op - 1].preco;
     }
-
-    preco = c[op - 1].preco;
 
     return preco;
 }
