@@ -35,7 +35,9 @@ Apesar de ser muito simples, o código pode ser utilizado na vida diária, fazen
 
 É neceessário que, no final, seja impresso o custo total dos produtos escolhidos
 
-## Desenvolvimento *adicionar fluxogramas
+## Desenvolvimento
+
+### [Fluxograma](https://lucid.app/lucidchart/3c6b9458-25c6-4742-a989-6e2efd4b445d/edit?viewport_loc=-77%2C107%2C2676%2C1125%2C0_0&invitationId=inv_24741dbf-1032-4974-8e45-acf23f80efd8#)
 
 ### Recursos
 
@@ -46,8 +48,6 @@ Foram usados neste software os seguintes recursos[[4](#referências)]:
 * Vetor;
 * Struct;
 * Funções;
-
-> COLAR TAMBÉM FLUXOGRAMAAAAAAAAAAAAAAAAAAAAAA
 
 ### Struct
 
@@ -74,7 +74,10 @@ int mn_cardapio(int o)
 
     return o;
 }
+
 ~~~
+
+a
 
 ### Menu de comidas e bebidas
 
