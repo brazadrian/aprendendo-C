@@ -37,7 +37,7 @@ Apesar de ser muito simples, o código pode ser utilizado na vida diária, fazen
 
 ## Desenvolvimento
 
-### [Fluxograma](https://lucid.app/lucidchart/3c6b9458-25c6-4742-a989-6e2efd4b445d/edit?viewport_loc=-77%2C107%2C2676%2C1125%2C0_0&invitationId=inv_24741dbf-1032-4974-8e45-acf23f80efd8#)
+### [Fluxograma](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/fluxograma.pdf)
 
 ### Recursos
 
@@ -61,12 +61,12 @@ Podendo ser utilizado para comidas, bebidas e afins.
 
 ### Menu principal
 
-Dentro do arquivo [*mn_cardapio.h*](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/mn_cardapio.h) são exibidas as possibilidades de tipos de produtos do estabelecimento, nesse caso só comidas e bebidas, além da opção de finalização do pedido.
+Dentro do arquivo [*mn_principal.h*](https://github.com/brazadrian/aprendendo-C/blob/master/Intermediaria/5_at_final_pedidos/mn_principal.h) são exibidas as possibilidades de tipos de produtos do estabelecimento, nesse caso só comidas e bebidas, além da opção de finalização do pedido.
 
 A função recebe um tipo inteiro ***opcao* → o**, e retorna a opção escolhida pelo usuário.
 
 ~~~c
-int mn_cardapio(int o)
+int mn_principal(int o)
 {
     printf("Exibição de todas as opções...");
     printf("Faça seu pedido. Digite sua opção: \n");
@@ -77,7 +77,7 @@ int mn_cardapio(int o)
 
 ~~~
 
-a
+![](assets/20220716_213652_image.png)
 
 ### Menu de comidas e bebidas
 
@@ -91,12 +91,16 @@ x[0].preco = 10.00;
 
 > 'x' significa qualquer variável declarada a partir do struct Produto
 
+![](assets/20220716_213818_image.png)
+
 Depois de declarados os itens do cardápio, faz-se uso de estrutura de repetição (for) para percorrer todo o vetor e imprimir as partes de estrutura Produto:
 
 ~~~c
 for (i = 0; i < tamanho_do_vetor; i++)
         printf("%d - R$ %.2f - %s\n", x[i].opcao, x[i].preco, x[i].nome);
 ~~~
+
+![](assets/20220716_213929_image.png)
 
 No que diz respeito a entrada de dados, há uma estrutura de repetição (while) que visa validar a entrada do usuário:
 
@@ -107,6 +111,8 @@ while (op < 0 || op > tamanho_do_vetor)
 }
 ~~~
 
+![](assets/20220716_214206_image.png)
+
 Ainda há umt este usando-se de estrutura de decisão (if) para que, se o usuário escolha sair da tela do menu (digitando o 0 que será atribuído na variável *op*, haverá a saída do software, sem passar pelas instruições internas do if em questão:
 
 ~~~c
@@ -115,6 +121,7 @@ if (op != 0)
         printf("Você escolheu comer/beber %s, que custa R$ %.2f\n\n", x[op - 1].nome, x[op - 1].preco);
         preco = x[op - 1].preco;
     }
+
 ~~~
 
 A função não recebe parâmetros e retorna tipo float, que será o preço do produto escolhido:
@@ -133,6 +140,8 @@ float mn_comidas(void)
 }
 ~~~
 
+![](assets/20220716_214311_image.png)
+
 ## Referências
 
 1. Problema ("lanche") nº [**1038**](https://www.beecrowd.com.br/judge/pt/problems/view/1038) do beecrowd.
@@ -140,3 +149,4 @@ float mn_comidas(void)
 3. Linguagem C descomplicada. [**Material complementar**](https://programacaodescomplicada.wordpress.com/complementar/)
 4. PEREIRA, S.L. [**Linguagem C**.](https://www.ime.usp.br/~slago/slago-C.pdf)
 5. BACKES, A. [**Linguagem C completa e descomplicada**](https://www.amazon.com.br/Linguagem-C-ANDR%C3%89-BACKES/dp/8535291067)
+6. BRAZ, Gilmar. [**Fluxogramas**](https://lucid.app/lucidchart/3c6b9458-25c6-4742-a989-6e2efd4b445d/edit?viewport_loc=1380%2C1678%2C1782%2C749%2C0_0&invitationId=inv_24741dbf-1032-4974-8e45-acf23f80efd8#) - LucidApp.
